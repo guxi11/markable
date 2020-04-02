@@ -1,5 +1,8 @@
 # Markable
 
+[![npm](https://badgen.net/npm/v/markable)](https://www.npmjs.com/package/markable)
+[![install size](https://badgen.net/packagephobia/install/markable)](https://packagephobia.now.sh/result?p=markable)
+
 - make non-English Markdown plain text markable
 - works in a browser or on a server
 
