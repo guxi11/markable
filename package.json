@@ -1,0 +1,26 @@
+{
+  "name": "markable",
+  "version": "0.0.0",
+  "description": "Make non-English Markdown plain text markable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hbhde/markable.git"
+  },
+  "keywords": [
+    "markdown",
+    "markup",
+    "html"
+  ],
+  "author": {
+    "name": "Guxi11"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hbhde/markable/issues"
+  },
+  "homepage": "https://github.com/hbhde/markable#readme"
+}
