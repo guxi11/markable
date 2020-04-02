@@ -52,6 +52,30 @@ npm install -s markable
 
 ```js
 var markable = require('markable');
-console.log(markable('》 Hello World')); // > Hello World
+console.log(markable('》 青山一道同云雨，明月何曾是两乡。')); // > 青山一道同云雨，明月何曾是两乡。
+```
+
+### Browser
+
+You can use markable with [marked](https://github.com/markedjs/marked)
+
+```html
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Marked Markable in the browser</title>
+</head>
+<body>
+  <div id="content"></div>
+  <script src="https://cdn.jsdelivr.net/npm/markable@0.0.3/src/markable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    var text = '》 青山一道同云雨，明月何曾是两乡。\n\n···js\n Hello World\n···';
+    document.getElementById('content').innerHTML =
+      marked(markable(text));
+  </script>
+</body>
+</html>
 ```
 
