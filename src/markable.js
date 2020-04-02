@@ -4,10 +4,10 @@
 function markable(text) {
   // throw error in case of non string input
   if (typeof text === 'undefined' || text === null) {
-    throw new Error('marked(): input parameter is undefined or null');
+    throw new Error('markable(): input parameter is undefined or null');
   }
   if (typeof text !== 'string') {
-    throw new Error('marked(): input parameter is of type '
+    throw new Error('markable(): input parameter is of type '
       + Object.prototype.toString.call(text) + ', string expected');
   }
 
