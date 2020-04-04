@@ -1,24 +1,29 @@
-# Contributing to Markable
+# Contributing
 
-First of all, thanks for your interest in contributing!
+## Issues
 
-## How to contribute?
+New issues are welcome, whether questions or suggestions or reporting bugs. You are also welcome to contribute by adding helpful comments on an existing issue.
 
-You can check [TASKS.TODO](https://github.com/hbhde/markable/blob/master/TASKS.TODO.md), and complete some of them. You can also find more tasks to do or simply report solid bugs for us to fix.
+## Pull Requests
 
-## How to report a bug?
+Pull Requests will be considered. Please submit pull requests against the develop branch.
 
-- **Ensure the bug was not already reported** by searching on GitHub under [Issues](https://github.com/hbhde/markable/issues).
-- If you're unable to find an open issue addressing the problem, [open a new one](https://github.com/hbhde/markable/issues/new). Be sure to include a **title and clear description**, as much relevant information as possible, and a **code sample** or an **executable test case** demonstrating the expected behavior that is not occurring.
+Follow the existing code style. Check the tests succeed.
 
-## How to add a new feature or change an existing one
+* `npm test`
 
-*Before making any significant changes, please [open an issue](https://github.com/hbhde/markable/issues).* Discussing your proposed changes ahead of time will make the contribution process smooth for everyone.
+Don't update the CHANGELOG or command version number. That gets done by maintainers when preparing the release.
 
-Once we've discussed your changes and you've got your code ready, make sure that tests are passing and open your pull request. Your PR is most likely to be accepted if it:
+Your commits should have a [good commit message](https://www.conventionalcommits.org/en/v1.0.0/).
 
-- Update the README.md if nessessary.
-- Includes tests for new functionality.
-- References the original issue in description if relevant, e.g. "Resolves #1".
-- Has a [good commit message](https://www.conventionalcommits.org/en/v1.0.0/).
+Useful things to include in your request description are:
+
+- what problem are you solving?
+- what Issues does this relate to?
+- suggested summary for CHANGELOG
+
+There are a lot of forms of documentation which could need updating for a change in functionality. It is ok if you want to show us the code to discuss before doing the extra work, and you should say so in your comments so we focus on the concept first before talking about all the other pieces:
+
+- README
+- tests
 
