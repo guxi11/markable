@@ -5,15 +5,15 @@
 [![install size](https://badgen.net/packagephobia/install/markable)](https://packagephobia.now.sh/result?p=markable)
 [![downloads](https://badgen.net/npm/dt/markable)](https://www.npmjs.com/package/markable)
 
-Markable can translate non-English symbols related to  [Markdown syntax](https://daringfireball.net/projects/markdown/syntax) into English, so when you write in a language other than English, you do not need to switch input methods.
+Markable可以将与[Markdown语法](https://www.jianshu.com/p/b03a8d7b1719)相关的非英语符号翻译成英语，因此当您使用英语以外的其他语言书写时，无需切换输入法。
 
-Read this in other languages: English | [简体中文](https://github.com/hbhde/markable/blob/master/README_ZH-CN.md)
+用其他语言阅读：[English](https://github.com/hbhde/markable/blob/master/README.md) | 简体中文
 
-## Demo
+## 演示
 
-Checkout the [demo](http://lengyue.ink/markable-markdown-editor/) to see markable in action.
+查看[演示](http://lengyue.ink/markable-markdown-editor/)以查看实际效果。
 
-## Installation
+## 安装
 
 ### npm
 
@@ -21,7 +21,7 @@ Checkout the [demo](http://lengyue.ink/markable-markdown-editor/) to see markabl
 npm install -s markable
 ```
 
-## Usage
+## 使用
 
 ### Node
 
@@ -30,9 +30,9 @@ var markable = require('markable');
 console.log(markable('》 青山一道同云雨，明月何曾是两乡。')); // > 青山一道同云雨，明月何曾是两乡。
 ```
 
-### Browser
+### 浏览器
 
-You can use markable with [marked](https://github.com/markedjs/marked)
+你可以将 markable 与 [marked](https://github.com/markedjs/marked) 一起使用。
 
 ```html
 <!doctype html>
@@ -54,11 +54,11 @@ You can use markable with [marked](https://github.com/markedjs/marked)
 </html>
 ```
 
-## Contributing
+## 贡献
 
-Feel free to dive in! Please follow this [guide](https://github.com/hbhde/markable/blob/dev/CONTRIBUTING.md).
+欢迎做出贡献，可以看看这篇[指引](https://github.com/hbhde/markable/blob/dev/CONTRIBUTING.md).
 
-## License
+## 许可证
 
 [MIT](https://github.com/hbhde/markable/blob/master/LICENSE)
 

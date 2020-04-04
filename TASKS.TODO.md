@@ -28,6 +28,6 @@
 
 ## Community
 
-- [ ] add tests
-- [ ] add contribute guide
+- [x] add tests
+- [x] add contribute guide
 
