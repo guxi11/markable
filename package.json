@@ -4,10 +4,13 @@
   "description": "Make non-English Markdown plain text markable",
   "main": "src/markable.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "coverage": "nyc --reporter html --reporter text npm test"
   },
   "husky": {
     "hooks": {
+      "pre-commit": "npm run coverage",
+      "pre-push": "npm run coverage",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -31,6 +34,8 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "husky": "^4.2.3"
+    "husky": "^4.2.3",
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.1"
   }
 }
