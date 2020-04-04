@@ -1,6 +1,6 @@
 # Contributing to Markable
 
-Firstly, thanks for your interest in contributing! I hope that this will be a pleasant first experience for you, and that you will return to continue contributing.
+First of all, thanks for your interest in contributing!
 
 ## How to contribute?
 
@@ -19,5 +19,6 @@ Once we've discussed your changes and you've got your code ready, make sure that
 
 - Update the README.md if nessessary.
 - Includes tests for new functionality.
-- References the original issue in description if relevant, e.g. "Resolves #123".
+- References the original issue in description if relevant, e.g. "Resolves #1".
 - Has a [good commit message](https://www.conventionalcommits.org/en/v1.0.0/).
+

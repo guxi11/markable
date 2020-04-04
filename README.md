@@ -81,6 +81,10 @@ You can use markable with [marked](https://github.com/markedjs/marked)
 </html>
 ```
 
+## Contributing
+
+Feel free to dive in! Please follow this [guide](https://github.com/hbhde/markable/blob/dev/CONTRIBUTING.md).
+
 ## License
 
 Copyright 2020 Guxi11 and contributors. Licensed [MIT](https://github.com/hbhde/markable/blob/master/LICENSE).
