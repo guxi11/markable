@@ -4,7 +4,8 @@
   "description": "Make non-English Markdown plain text markable",
   "main": "src/markable.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commitmsg": "commitlint -E GIT_PARAMS"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/hbhde/markable/issues"
   },
-  "homepage": "https://github.com/hbhde/markable#readme"
+  "homepage": "https://github.com/hbhde/markable#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.3"
+  }
 }
