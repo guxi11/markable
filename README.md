@@ -10,37 +10,11 @@
 
 ## Features
 
-You can write markdown text in non-English languages without switching input methods, Markable will make it markable by translating the relevant characters in [Markdown syntax](https://daringfireball.net/projects/markdown/syntax) into English.
+Markable can translate non-English symbols related to  [Markdown syntax](https://daringfireball.net/projects/markdown/syntax) into English, so when you write in a language other than English, you do not need to switch input methods.
 
-Take Chinese as an example:
+## Demo
 
-**BLOCKQUOTES**
-
-```
-》 青山一道同云雨，明月何曾是两乡。
-```
-
-will turn into:
-
-```
-> 青山一道同云雨，明月何曾是两乡。
-```
-
-**CODE BLOCKS**
-
-```
-···js
-console.log(Hello World');
-···
-```
-
-will turn into:
-
-```
-​```js
-console.log(Hello World');
-​```
-```
+Checkout the [demo](http://lengyue.ink/markable-markdown-editor/) to see markable in action.
 
 ## Installation
 
