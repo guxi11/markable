@@ -10,9 +10,11 @@
 
 ## Features
 
+You can write markdown text in non-English languages without switching input methods, Markable will make it markable by translating the relevant characters in markdown syntax into English.
+
 Take Chinese as an example:
 
-### BLOCKQUOTES
+**BLOCKQUOTES**
 
 ```
 》 青山一道同云雨，明月何曾是两乡。
@@ -24,7 +26,7 @@ will turn into:
 > 青山一道同云雨，明月何曾是两乡。
 ```
 
-### CODE BLOCKS
+**CODE BLOCKS**
 
 ```
 ···js
