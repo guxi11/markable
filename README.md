@@ -81,3 +81,6 @@ You can use markable with [marked](https://github.com/markedjs/marked)
 </html>
 ```
 
+## License
+
+Copyright 2020 Guxi11 and contributors. Licensed [MIT](https://github.com/hbhde/markable/blob/master/LICENSE).
