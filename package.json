@@ -4,8 +4,12 @@
   "description": "Make non-English Markdown plain text markable",
   "main": "src/markable.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "commitmsg": "commitlint -E GIT_PARAMS"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "repository": {
     "type": "git",
