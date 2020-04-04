@@ -10,7 +10,7 @@
 
 ## Features
 
-You can write markdown text in non-English languages without switching input methods, Markable will make it markable by translating the relevant characters in markdown syntax into English.
+You can write markdown text in non-English languages without switching input methods, Markable will make it markable by translating the relevant characters in [Markdown syntax](https://daringfireball.net/projects/markdown/syntax) into English.
 
 Take Chinese as an example:
 
