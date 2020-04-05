@@ -26,8 +26,9 @@
 - [ ] add document
 - [ ] add features in TASKS.TODO
 
-## Community
+## Test
 
-- [x] add tests
-- [x] add contribute guide
+- [x] add translate tests
+- [x] add intput tests
+- [ ] add expose tests
 
