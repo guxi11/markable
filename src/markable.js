@@ -1,17 +1,19 @@
+const Translator = require('./Translator.js');
+
 /**
  * Markable
  */
-function markable(text) {
+function markable(src) {
   // throw error in case of non string input
-  if (typeof text === 'undefined' || text === null) {
+  if (typeof src === 'undefined' || src === null) {
     throw new Error('markable(): input parameter is undefined or null');
   }
-  if (typeof text !== 'string') {
+  if (typeof src !== 'string') {
     throw new Error('markable(): input parameter is of type '
-      + Object.prototype.toString.call(text) + ', string expected');
+      + Object.prototype.toString.call(src) + ', string expected');
   }
 
-  return text.replace(/》 /g, "> ").replace(/···/g, "```");
+  return Translator.translate(src);
 };
 
 /**

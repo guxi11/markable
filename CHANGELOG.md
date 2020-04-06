@@ -1,3 +1,7 @@
+## 0.0.4(2020-04-06)
+
+- add Translator, fix some translation issues
+
 ## 0.0.3(2020-04-02)
 
 ### Features
@@ -36,5 +40,5 @@ Make non-English Markdown plain text markable
 
 ### Features
 
-- ``》 青山一道同云雨，明月何曾是两乡。`` → ``> 青山一道同云雨，明月何曾是两乡。
+- ``》 青山一道同云雨，明月何曾是两乡。`` → ``> 青山一道同云雨，明月何曾是两乡。``
 - ``···js\n code \n···  `` → `` ```js\n code \n```  `` 
