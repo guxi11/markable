@@ -5,7 +5,7 @@
 [![install size](https://badgen.net/packagephobia/install/markable)](https://packagephobia.now.sh/result?p=markable)
 [![downloads](https://badgen.net/npm/dt/markable)](https://www.npmjs.com/package/markable)
 
-Markable can translate non-English symbols related to  [Markdown syntax](https://daringfireball.net/projects/markdown/syntax) into English, so when you write in a language other than English, you do not need to switch input methods.
+Markable can translate non-English symbols related to  [Markdown syntax](https://daringfireball.net/projects/markdown/syntax) into English. So when you write in a language other than English, if you want to use Markdown syntax, there is no need to switch input methods.
 
 Read this in other languages: English | [简体中文](https://github.com/hbhde/markable/blob/master/README_ZH-CN.md)
 
