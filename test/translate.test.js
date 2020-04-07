@@ -2,10 +2,11 @@ var assert = require('assert');
 
 var markable = require('../src/markable.js');
 
-describe('Markable Tests', function() {
+describe('Translate Tests', function() {
   describe('BLOCKQUOTES Tests', function() {
     it('should turn "》 " into "> "', function(done) {
       assert.equal(markable('》 青山'), '> 青山');
+      assert.equal(markable('\n》 青山'), '\n> 青山');
       done();
     });
 

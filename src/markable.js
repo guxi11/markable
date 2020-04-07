@@ -19,18 +19,4 @@ function markable(src) {
 /**
  * Expose
  */
-// AMD Loader
-if (typeof define === 'function' && define.amd) {
-  define(function () {
-    'use strict';
-    return markable;
-  });
-}
-// CommonJS/nodeJS Loader
-else if (typeof module !== 'undefined' && module.exports) {
-  module.exports = markable;
-}
-// Regular Browser loader
-else {
-  this.markable = markable;
-}
+module.exports = markable;

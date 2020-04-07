@@ -5,7 +5,12 @@
   "main": "src/markable.js",
   "scripts": {
     "test": "mocha",
-    "coverage": "nyc --reporter html --reporter text npm test"
+    "coverage": "nyc --reporter html --reporter text npm test",
+    "build": "npm run rollup && npm run minify",
+    "rollup": "npm run rollup:umd && npm run rollup:esm",
+    "rollup:umd": "rollup -c rollup.config.js",
+    "rollup:esm": "rollup -c rollup.config.esm.js",
+    "minify": "uglifyjs lib/markable.js -cm  --comments /Copyright/ -o markable.min.js"
   },
   "husky": {
     "hooks": {
@@ -32,10 +37,16 @@
   },
   "homepage": "https://github.com/hbhde/markable#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.9.0",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "husky": "^4.2.3",
     "mocha": "^7.1.1",
-    "nyc": "^15.0.1"
+    "nyc": "^15.0.1",
+    "rollup": "^2.3.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-license": "^2.0.0",
+    "uglify-js": "^3.8.1"
   }
 }
