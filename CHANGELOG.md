@@ -1,3 +1,9 @@
+## 0.0.5(2020-04-08)
+
+- add symbols
+- add InlineTranslator
+- build with rollup and uglify-js
+
 ## 0.0.4(2020-04-06)
 
 - add Translator, fix some translation issues
