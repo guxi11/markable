@@ -43,7 +43,7 @@ You can use markable with [marked](https://github.com/markedjs/marked)
 </head>
 <body>
   <div id="content"></div>
-  <script src="https://cdn.jsdelivr.net/npm/markable@0.0.3/src/markable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markable@0.0.5/markable.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     var text = '》 青山一道同云雨，明月何曾是两乡。\n\n···js\n Hello World\n···';
