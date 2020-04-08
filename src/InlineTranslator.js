@@ -6,7 +6,6 @@ const { inline } = require('./rules.js');
 module.exports = class InlineTranslator {
   constructor() {
     this.rules = inline;
-    this.dest = '';
   }
 
   static translate(src) {
@@ -15,14 +14,15 @@ module.exports = class InlineTranslator {
   }
 
   translate(src) {
-    let cap;
+    let dest = '',
+        cap;
 
     while(src) {
 
       // link
       if (cap = this.rules.link.exec(src)) {
         src = src.substring(cap[0].length);
-        this.dest += cap[0]
+        dest += cap[0]
           .replace(/！/, '!')
           .replace(/【/, '[')
           .replace(/】/, ']')
@@ -35,7 +35,7 @@ module.exports = class InlineTranslator {
       // code
       if (cap = this.rules.code.exec(src)) {
         src = src.substring(cap[0].length);
-        this.dest += cap[0]
+        dest += cap[0]
           .replace(/·/g, '`');
         continue;
       }
@@ -43,11 +43,11 @@ module.exports = class InlineTranslator {
       // text
       if (cap = this.rules.text.exec(src)) {
         src = src.substring(cap[0].length);
-        this.dest += cap[0];
+        dest += cap[0];
         continue;
       }
     }
 
-    return this.dest;
+    return dest;
   }
 }

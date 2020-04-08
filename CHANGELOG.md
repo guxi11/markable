@@ -1,3 +1,7 @@
+## 0.0.6(2020-04-08)
+
+- fix InlineTranslator superimposed error
+
 ## 0.0.5(2020-04-08)
 
 - add symbols

@@ -28,11 +28,11 @@ describe('Translate Block Tests', function() {
 
 describe('Translate Inline Tests', function() {
   describe('Link Tests', function() {
-    it('should turn "!【label】（http）" into "![label](http)"', function(done) {
-      assert.equal(markable('!【label】（http）'), '![label](http)');
+    it('should turn "！【label】（http）" into "![label](http)"', function(done) {
+      assert.equal(markable('！【label】（http）'), '![label](http)');
       assert.equal(markable('【label】（http）'), '[label](http)');
-      assert.equal(markable('》》!【label】（http）'), '>>![label](http)');
-      assert.equal(markable('!【标题】（http://example.net/1.png “图片Title”）'), '![标题](http://example.net/1.png "图片Title")');
+      assert.equal(markable('！【标题】（http://example.net/1.png “图片Title”）'), '![标题](http://example.net/1.png "图片Title")');
+      assert.equal(markable('！【标题】（http://example.net/1.png "图片Title"）'), '![标题](http://example.net/1.png "图片Title")');
       done();
     });
 

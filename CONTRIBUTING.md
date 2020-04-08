@@ -8,9 +8,10 @@ New issues are welcome, whether questions or suggestions or reporting bugs. You 
 
 Pull Requests will be considered. Please submit pull requests against the develop branch.
 
-Follow the existing code style. Check the tests succeed.
+Follow the existing code style. Check the tests succeed. Run the build.
 
 * `npm test`
+* `npm run build`
 
 Don't update the CHANGELOG or command version number. That gets done by maintainers when preparing the release.
 
