@@ -4,10 +4,10 @@
 
 const caret = /(^|[^\[])\^/g;
 function edit(regex) {
-  regex = regex.source || regex;
+  regex = regex.source;
   const obj = {
     replace: (name, val) => {
-      val = val.source || val;
+      val = val.source;
       val = val.replace(caret, '$1');
       regex = regex.replace(name, val);
       return obj;
@@ -15,7 +15,7 @@ function edit(regex) {
     replaceAllByDict: (dict) => {
       for (let key in dict) {
         let name = key, val = dict[key];
-        val = val.source || val;
+        val = val.source;
         val = val.replace(caret, '$1');
         regex = regex.replace(RegExp(name, 'g'), val);
       }

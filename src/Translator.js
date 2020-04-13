@@ -21,9 +21,11 @@ module.exports = class Translator {
       .replace(/\r\n|\r/g, '\n')
       .replace(/\t/g, '    ');
 
-    let cap;
+    let cap,
+        left;
 
     while(src) {
+      console.log(src)
       // newline
       if (cap = this.rules.newline.exec(src)) {
         src = src.substring(cap[0].length);
@@ -35,17 +37,21 @@ module.exports = class Translator {
         src = src.substring(cap[0].length);
         this.dest += cap[0]
           .replace(/[·]{3}/g, '```');
+        continue;
       }
 
-      // blockquote
-      if (cap = this.rules.blockquote.exec(src)) {
+      // blockquote or listquote
+      if (cap = this.rules.blockquote.exec(src) || this.rules.listquote.exec(src)) {
         src = src.substring(cap[0].length);
-        this.dest += InlineTranslator.translate(cap[0])
+        left = cap[0].substring(0, cap[0].indexOf(cap[1]))
           .replace(/[》〉]/g, '>');
+        this.dest += left + InlineTranslator.translate(cap[1]);
+        continue;
       }
 
       // text
       if (cap = this.rules.text.exec(src)) {
+        console.log(cap)
         src = src.substring(cap[0].length);
         this.dest += InlineTranslator.translate(cap[0]);
       }

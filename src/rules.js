@@ -7,17 +7,15 @@ const symbols = require('./symbols.js');
 const block = {
   newline: /^\n+/,
   fences: /^ {0,3}([=`=]{3,}(?=[^\n]*\n)|~{3,})([^\n]*)\n(?:|([\s\S]*?)\n)(?: {0,3}\1[=`=]* *(?:\n+|$)|$)/,
-  blockquote: /^( {0,3}[=>=] ?(paragraph|[^\n]*)(?:\n|$))+/,
-  _paragraph: /^([^\n]+(?:\n(?!blockquote)[^\n]+)*)/,
+  blockquote: /^ {0,3}[=>=]+(([^\n]*)(?:\n|$))/,
+  listquote: /^ *bull ?blockquote/,
   text: /^[^\n]+/
 };
 
-block.paragraph = edit(block._paragraph)
-  .replace('blockquote', ' {0,3}>')
-  .getRegex();
-
-block.blockquote = edit(block.blockquote)
-  .replace('paragraph', block.paragraph)
+block.bullet = /(?:[*+-]|\d{1,9}\.)/;
+block.listquote = edit(block.listquote)
+  .replace('bull', block.bullet)
+  .replace('blockquote', block.blockquote)
   .getRegex();
 
 /**
@@ -25,8 +23,8 @@ block.blockquote = edit(block.blockquote)
  */
 const inline = {
   link: /^[=!=]?[=\[=](label)[=\]=][=\(=]\s*(href)(?:\s+(title))?\s*[=\)=]/,
-  reflink: /^[=!=]?[=\[=](label)[=\]=][=\[=](?!\s*[=\]=])((?:\\[=\[==\]=]?|[^=\[==\]=\\])+)[=\]=]/,
-  nolink: /^[=!=]?[=\[=](?!\s*[=\]=])((?:[=\[=][^=\[==\]=]*[=\]=]|\\[=\[==\]=]|[^=\[==\]=])*)[=\]=](?:[=\[=][=\]=])?/,
+  reflink: /^[=!=]?[=\[=](label)[=\]=][=\[=](id)[=\]=]/,
+  linkdefinition: /^[=\[=](id)[=\]=][=:=]\s*(href)(?:\s+(title))?/,
   code: /^([=`=]+)([^=`=]|[^=`=][\s\S]*?[^=`=])\1(?![=`=])/,
   text: /^([=`=]+|[^=`=])(?:[\s\S]*?(?:(?=[\\<!=\[==`=*]|\b_|$)|[^ ](?= {2,}\n))|(?= {2,}\n))/
 };
@@ -34,6 +32,7 @@ const inline = {
 inline._label = /(?:[=\[=][^=\[==\]=]*[=\]=]|\\.|[=`=][^=`=]*[=`=]|[^=\[==\]=\\=`=])*?/;
 inline._href = /<(?:\\[<>]?|[^\s<>\\])*>|[^\s\x00-\x1f]*/;
 inline._title = /[="=](?:\\[="=]?|[^="=\\])*[="=]|[='=](?:\\[='=]?|[^='=\\])*[='=]|[=\(=](?:\\[=\)=]?|[^)\\])*[=\)=]/;
+inline._id = /(?!\s*[=\]=])((?:\\[=\[==\]=]?|[^=\[==\]=\\])+)/;
 
 inline.link = edit(inline.link)
   .replace('label', inline._label)
@@ -43,6 +42,13 @@ inline.link = edit(inline.link)
 
 inline.reflink = edit(inline.reflink)
   .replace('label', inline._label)
+  .replace('id', inline._id)
+  .getRegex();
+
+inline.linkdefinition = edit(inline.linkdefinition)
+  .replace('id', inline._id)
+  .replace('href', inline._href)
+  .replace('title', inline._title)
   .getRegex();
 
 /**
