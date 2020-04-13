@@ -1,3 +1,7 @@
+## 0.0.7(2020-04-13)
+
+- translate nested text
+
 ## 0.0.6(2020-04-08)
 
 - fix InlineTranslator superimposed error

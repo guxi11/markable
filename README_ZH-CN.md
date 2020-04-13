@@ -5,7 +5,7 @@
 [![install size](https://badgen.net/packagephobia/install/markable)](https://packagephobia.now.sh/result?p=markable)
 [![downloads](https://badgen.net/npm/dt/markable)](https://www.npmjs.com/package/markable)
 
-Markable可以将与[ Markdown 语法](https://www.jianshu.com/p/b03a8d7b1719)相关的非英文符号翻译成英文，因此当您使用英文以外的其他语言书写时，若想使用 Markdown 语法，无需切换输入法。
+Markalbe 能让你用任何语言编写 markdown 文档。Markdoan 将非英语的与 [ Markdown 语法](https://www.jianshu.com/p/b03a8d7b1719) 相关的符号翻译成英文，以便任何markdown解析器都可以解析它们。
 
 用其他语言阅读：[English](https://github.com/hbhde/markable/blob/master/README.md) | 简体中文
 
@@ -43,7 +43,7 @@ console.log(markable('》 青山一道同云雨，明月何曾是两乡。')); /
 </head>
 <body>
   <div id="content"></div>
-  <script src="https://cdn.jsdelivr.net/npm/markable@0.0.6/markable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markable@0.0.7/markable.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     var text = '》 青山一道同云雨，明月何曾是两乡。\n\n···js\n Hello World\n···';
@@ -53,6 +53,10 @@ console.log(markable('》 青山一道同云雨，明月何曾是两乡。')); /
 </body>
 </html>
 ```
+
+## 贡献
+
+不论大小，总是欢迎贡献。 贡献之前，请先阅读[贡献](https://github.com/hbhde/markable/blob/master/CONTRIBUTING.md)。
 
 ## 许可证
 

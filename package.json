@@ -1,6 +1,6 @@
 {
   "name": "markable",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Make non-English Markdown plain text markable",
   "main": "src/markable.js",
   "scripts": {

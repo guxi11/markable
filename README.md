@@ -5,7 +5,7 @@
 [![install size](https://badgen.net/packagephobia/install/markable)](https://packagephobia.now.sh/result?p=markable)
 [![downloads](https://badgen.net/npm/dt/markable)](https://www.npmjs.com/package/markable)
 
-Markable can translate non-English symbols related to  [Markdown syntax](https://daringfireball.net/projects/markdown/syntax) into English. So when you write in a language other than English, if you want to use Markdown syntax, there is no need to switch input methods.
+Markalbe allows you to write markdown document in any language. Markable translate your  non-English [Markdown syntax](https://daringfireball.net/projects/markdown/syntax) related symbols into English, so that they can be parse by any markdown parser.
 
 Read this in other languages: English | [简体中文](https://github.com/hbhde/markable/blob/master/README_ZH-CN.md)
 
@@ -43,7 +43,7 @@ You can use markable with [marked](https://github.com/markedjs/marked)
 </head>
 <body>
   <div id="content"></div>
-  <script src="https://cdn.jsdelivr.net/npm/markable@0.0.6/markable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markable@0.0.7/markable.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
     var text = '》 青山一道同云雨，明月何曾是两乡。\n\n···js\n Hello World\n···';
@@ -53,6 +53,10 @@ You can use markable with [marked](https://github.com/markedjs/marked)
 </body>
 </html>
 ```
+
+## Contributing 
+
+Contributions are always welcome, no matter how large or small. Before contributing, please read the [Contributing](https://github.com/hbhde/markable/blob/master/CONTRIBUTING.md).
 
 ## License
 
