@@ -8,7 +8,6 @@ module.exports = class Translator {
   constructor() {
     this.rules = block;
     this.dest = '';
-    this.inlineTranslator = new InlineTranslator();
   }
 
   static translate(src) {
@@ -41,14 +40,14 @@ module.exports = class Translator {
       // blockquote
       if (cap = this.rules.blockquote.exec(src)) {
         src = src.substring(cap[0].length);
-        this.dest += this.inlineTranslator.translate(cap[0])
+        this.dest += InlineTranslator.translate(cap[0])
           .replace(/[》〉]/g, '>');
       }
 
       // text
       if (cap = this.rules.text.exec(src)) {
         src = src.substring(cap[0].length);
-        this.dest += this.inlineTranslator.translate(cap[0]);
+        this.dest += InlineTranslator.translate(cap[0]);
       }
     }
 
