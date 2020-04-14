@@ -25,7 +25,6 @@ module.exports = class Translator {
         left;
 
     while(src) {
-      console.log(src)
       // newline
       if (cap = this.rules.newline.exec(src)) {
         src = src.substring(cap[0].length);
@@ -51,7 +50,6 @@ module.exports = class Translator {
 
       // text
       if (cap = this.rules.text.exec(src)) {
-        console.log(cap)
         src = src.substring(cap[0].length);
         this.dest += InlineTranslator.translate(cap[0]);
       }
