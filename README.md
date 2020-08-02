@@ -11,7 +11,7 @@ Read this in other languages: English | [简体中文](https://github.com/hbhde/
 
 ## Demo
 
-Checkout the [demo](http://lengyue.ink/markable-markdown-editor/) to see markable in action.
+Checkout the [demo](http://guxi11.com/markable-markdown-editor/) to see markable in action.
 
 ## Installation
 
