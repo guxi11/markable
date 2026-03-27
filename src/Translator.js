@@ -31,16 +31,46 @@ module.exports = class Translator {
         this.dest += cap[0];
       }
 
+      // heading
+      if (cap = this.rules.heading.exec(src)) {
+        src = src.substring(cap[0].length);
+        let hashes = cap[1].replace(/＃/g, '#');
+        this.dest += hashes + cap[0].substring(cap[1].length, cap[0].indexOf(cap[2])) + InlineTranslator.translate(cap[2]);
+        continue;
+      }
+
       // fences
       if (cap = this.rules.fences.exec(src)) {
         src = src.substring(cap[0].length);
         this.dest += cap[0]
-          .replace(/[·]{3}/g, '```');
+          .replace(/[·]{3}/g, '```')
+          .replace(/[～]{3}/g, '~~~');
+        continue;
+      }
+
+      // hr
+      if (cap = this.rules.hr.exec(src)) {
+        src = src.substring(cap[0].length);
+        let rule = cap[1]
+          .replace(/－/g, '-')
+          .replace(/＊/g, '*')
+          .replace(/——/g, '__');
+        this.dest += cap[0].replace(cap[1], rule);
+        continue;
+      }
+
+      // table
+      if (cap = this.rules.table.exec(src)) {
+        src = src.substring(cap[0].length);
+        this.dest += cap[0]
+          .replace(/｜/g, '|')
+          .replace(/：/g, ':')
+          .replace(/－/g, '-');
         continue;
       }
 
       // blockquote or listquote
-      if (cap = this.rules.blockquote.exec(src) || this.rules.listquote.exec(src)) {
+      if ((cap = this.rules.blockquote.exec(src)) || (cap = this.rules.listquote.exec(src))) {
         src = src.substring(cap[0].length);
         left = cap[0].substring(0, cap[0].indexOf(cap[1]))
           .replace(/[》〉]/g, '>');

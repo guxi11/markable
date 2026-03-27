@@ -1,3 +1,26 @@
+## 0.1.0(2026-03-27)
+
+### Features
+
+- Heading: ``＃ 标题`` → ``# 标题`` (supports ＃ to ######)
+- Bold: ``＊＊加粗＊＊`` → ``**加粗**``
+- Italic: ``＊斜体＊`` → ``*斜体*``
+- Strikethrough: ``～～删除线～～`` → ``~~删除线~~``
+- Horizontal Rule: ``－－－`` → ``---``, ``＊＊＊`` → ``***``
+- Table: ``｜head｜`` → ``|head|`` with fullwidth ``－``, ``：`` support
+- Code Fence (tilde): ``～～～js`` → ``~~~js``
+- Single quotes: ``'title'`` → ``'title'``
+
+### Improvements
+
+- Added fullwidth symbol mappings: ＃, ＊, ～, ｜, －, ＋
+- Fixed Unicode curly quote (""/'') handling in link titles
+- Inline text rule now correctly stops at fullwidth ＊ and ～
+
+### Tests
+
+- Added 48 comprehensive test cases covering all new and existing features
+
 ## 0.0.7(2020-04-13)
 
 - translate nested text

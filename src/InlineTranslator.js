@@ -31,7 +31,8 @@ module.exports = class InlineTranslator {
           .replace(/】/, ']')
           .replace(/（/, '(')
           .replace(/）/, ')')
-          .replace(/[“”]/g, '"');
+          .replace(/[\u201c\u201d]/g, '"')
+          .replace(/[\u2018\u2019]/g, "'");
         dest += left + this.translate(cap[1]) + right;
         continue;
       }
@@ -55,7 +56,33 @@ module.exports = class InlineTranslator {
           .replace(/【/, '[')
           .replace(/】/, ']')
           .replace(/：/, ':')
-          .replace(/[“”]/g, '"');
+          .replace(/[\u201c\u201d]/g, '"')
+          .replace(/[\u2018\u2019]/g, "'");
+        continue;
+      }
+
+      // strong (bold)
+      if (cap = this.rules.strong.exec(src)) {
+        src = src.substring(cap[0].length);
+        let inner = cap[1] || cap[2];
+        let marker = cap[1] ? '**' : '__';
+        dest += marker + this.translate(inner) + marker;
+        continue;
+      }
+
+      // em (italic)
+      if (cap = this.rules.em.exec(src)) {
+        src = src.substring(cap[0].length);
+        let inner = cap[1] || cap[2];
+        let marker = cap[1] ? '*' : '_';
+        dest += marker + this.translate(inner) + marker;
+        continue;
+      }
+
+      // strikethrough
+      if (cap = this.rules.strikethrough.exec(src)) {
+        src = src.substring(cap[0].length);
+        dest += '~~' + this.translate(cap[1]) + '~~';
         continue;
       }
 
