@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hbhde/markable.git"
+    "url": "git+https://github.com/guxi11/markable.git"
   },
   "keywords": [
     "markdown",
@@ -33,9 +33,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hbhde/markable/issues"
+    "url": "https://github.com/guxi11/markable/issues"
   },
-  "homepage": "https://github.com/hbhde/markable#readme",
+  "homepage": "https://github.com/guxi11/markable",
   "devDependencies": {
     "@babel/preset-env": "^7.9.0",
     "@commitlint/cli": "^8.3.5",
